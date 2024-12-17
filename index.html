@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grade Conversion Tool</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="container">
+    <h2>Grading System Conversion Tool</h2>
+    <form method="POST" action="grade_conversion.php">
+        <label for="score">Enter the grade (0-100):</label>
+        <input type="text" name="score" id="score" placeholder="Enter Grade" required>
+        <button type="submit">Convert Grade</button>
+    </form>
+
+    <?php 
+    if (isset($message) && $message !== "") { 
+        echo "<div class='message'>$message</div>";
+    }
+    ?>
+</div>
+
+</body>
+</html>
